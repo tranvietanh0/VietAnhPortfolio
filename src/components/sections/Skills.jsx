@@ -4,7 +4,7 @@ import { skills } from '../../data/portfolioData';
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 md:py-32 bg-dark-secondary">
+    <section id="skills" className="py-20 md:py-32 bg-light-secondary dark:bg-dark-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <SectionTitle
           title="Skills & Expertise"

@@ -52,7 +52,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-dark-primary">
+    <section id="contact" className="py-20 md:py-32 bg-light-primary dark:bg-dark-primary">
       <div className="container mx-auto px-4 md:px-6">
         <SectionTitle
           title="Get In Touch"
@@ -64,10 +64,10 @@ const Contact = () => {
           <ScrollReveal direction="left">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-text-primary mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-text-primary mb-4">
                   Let&apos;s create something amazing
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-gray-600 dark:text-text-secondary">
                   I&apos;m always interested in hearing about new projects and opportunities.
                   Whether you have a question or just want to say hi, feel free to reach out!
                 </p>
@@ -77,25 +77,25 @@ const Contact = () => {
                 {contactInfo.map((item, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-center gap-4 p-4 bg-dark-secondary rounded-xl border border-white/5 hover:border-accent/30 transition-all duration-300"
+                    className="flex items-center gap-4 p-4 bg-light-secondary dark:bg-dark-secondary rounded-xl border border-gray-200 dark:border-white/5 hover:border-accent/30 transition-all duration-300"
                     whileHover={{ x: 5 }}
                   >
                     <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
                       <item.icon className="text-accent" size={22} />
                     </div>
                     <div>
-                      <div className="text-text-secondary text-sm">{item.label}</div>
+                      <div className="text-gray-600 dark:text-text-secondary text-sm">{item.label}</div>
                       {item.href ? (
                         <a
                           href={item.href}
                           target={item.href.startsWith('http') ? '_blank' : undefined}
                           rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className="text-text-primary hover:text-accent transition-colors"
+                          className="text-gray-900 dark:text-text-primary hover:text-accent transition-colors"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <div className="text-text-primary">{item.value}</div>
+                        <div className="text-gray-900 dark:text-text-primary">{item.value}</div>
                       )}
                     </div>
                   </motion.div>
@@ -108,7 +108,7 @@ const Contact = () => {
           <ScrollReveal direction="right">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-text-primary mb-2 font-medium">
+                <label htmlFor="name" className="block text-gray-900 dark:text-text-primary mb-2 font-medium">
                   Name
                 </label>
                 <input
@@ -118,13 +118,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-secondary border border-white/10 rounded-lg text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-accent transition-colors"
+                  className="w-full px-4 py-3 bg-light-secondary dark:bg-dark-secondary border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-text-primary placeholder-gray-400 dark:placeholder-text-secondary/50 focus:outline-none focus:border-accent transition-colors"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-text-primary mb-2 font-medium">
+                <label htmlFor="email" className="block text-gray-900 dark:text-text-primary mb-2 font-medium">
                   Email
                 </label>
                 <input
@@ -134,13 +134,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-secondary border border-white/10 rounded-lg text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-accent transition-colors"
+                  className="w-full px-4 py-3 bg-light-secondary dark:bg-dark-secondary border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-text-primary placeholder-gray-400 dark:placeholder-text-secondary/50 focus:outline-none focus:border-accent transition-colors"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-text-primary mb-2 font-medium">
+                <label htmlFor="message" className="block text-gray-900 dark:text-text-primary mb-2 font-medium">
                   Message
                 </label>
                 <textarea
@@ -150,7 +150,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-dark-secondary border border-white/10 rounded-lg text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-accent transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-light-secondary dark:bg-dark-secondary border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-text-primary placeholder-gray-400 dark:placeholder-text-secondary/50 focus:outline-none focus:border-accent transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>

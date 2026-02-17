@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../ui/SectionTitle';
 import ProjectCard from '../ui/ProjectCard';
-import { projects } from '../../data/portfolioData';
+import { projects, personalInfo } from '../../data/portfolioData';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -15,7 +15,7 @@ const Projects = () => {
     : projects.filter(p => p.tags.includes(filter));
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-dark-secondary">
+    <section id="projects" className="py-20 md:py-32 bg-light-secondary dark:bg-dark-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <SectionTitle
           title="Featured Projects"
@@ -37,7 +37,7 @@ const Projects = () => {
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                 filter === tag
                   ? 'bg-accent text-white'
-                  : 'bg-dark-tertiary text-text-secondary hover:text-text-primary hover:bg-dark-primary'
+                  : 'bg-light-tertiary dark:bg-dark-tertiary text-gray-600 dark:text-text-secondary hover:text-gray-900 dark:hover:text-text-primary hover:bg-light-primary dark:hover:bg-dark-primary'
               }`}
             >
               {tag.charAt(0).toUpperCase() + tag.slice(1)}

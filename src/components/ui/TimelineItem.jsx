@@ -21,20 +21,20 @@ const TimelineItem = ({ experience, index, isLast }) => {
       </div>
 
       {/* Content */}
-      <div className="bg-dark-secondary rounded-xl p-6 border border-white/5 hover:border-accent/30 transition-all duration-300 ml-4">
+      <div className="bg-light-secondary dark:bg-dark-secondary rounded-xl p-6 border border-gray-200 dark:border-white/5 hover:border-accent/30 transition-all duration-300 ml-4">
         <div className="flex flex-wrap items-center gap-3 mb-3">
-          <h3 className="text-xl font-semibold text-text-primary">{experience.role}</h3>
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-text-primary">{experience.role}</h3>
           <span className="text-accent text-sm font-medium px-3 py-1 bg-accent/10 rounded-full">
             {experience.duration}
           </span>
         </div>
         <h4 className="text-accent-purple font-medium mb-3">{experience.company}</h4>
-        <p className="text-text-secondary mb-4">{experience.description}</p>
+        <p className="text-gray-600 dark:text-text-secondary mb-4">{experience.description}</p>
 
         {experience.highlights && (
           <ul className="space-y-2">
             {experience.highlights.map((highlight, idx) => (
-              <li key={idx} className="flex items-start gap-2 text-text-secondary text-sm">
+              <li key={idx} className="flex items-start gap-2 text-gray-600 dark:text-text-secondary text-sm">
                 <span className="text-accent mt-1">&#x2022;</span>
                 {highlight}
               </li>

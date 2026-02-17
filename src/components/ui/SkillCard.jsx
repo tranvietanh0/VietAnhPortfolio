@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const SkillCard = ({ category, items, index }) => {
   return (
     <motion.div
-      className="bg-dark-secondary rounded-xl p-6 border border-white/5 hover:border-accent/30 transition-all duration-300"
+      className="bg-light-primary dark:bg-dark-secondary rounded-xl p-6 border border-gray-200 dark:border-white/5 hover:border-accent/30 transition-all duration-300"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -14,10 +14,10 @@ const SkillCard = ({ category, items, index }) => {
         {items.map((skill, idx) => (
           <div key={idx}>
             <div className="flex justify-between mb-2">
-              <span className="text-text-primary font-medium">{skill.name}</span>
-              <span className="text-text-secondary text-sm">{skill.level}%</span>
+              <span className="text-gray-900 dark:text-text-primary font-medium">{skill.name}</span>
+              <span className="text-gray-600 dark:text-text-secondary text-sm">{skill.level}%</span>
             </div>
-            <div className="h-2 bg-dark-tertiary rounded-full overflow-hidden">
+            <div className="h-2 bg-light-tertiary dark:bg-dark-tertiary rounded-full overflow-hidden">
               <motion.div
                 className="h-full bg-gradient-to-r from-accent to-accent-purple rounded-full"
                 initial={{ width: 0 }}

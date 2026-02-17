@@ -12,7 +12,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-dark-primary">
+    <section id="about" className="py-20 md:py-32 bg-light-primary dark:bg-dark-primary">
       <div className="container mx-auto px-4 md:px-6">
         <SectionTitle
           title="About Me"
@@ -24,7 +24,7 @@ const About = () => {
           <ScrollReveal direction="left">
             <div className="relative">
               <div className="aspect-square max-w-md mx-auto rounded-2xl overflow-hidden bg-gradient-to-br from-accent/20 to-accent-purple/20 p-1">
-                <div className="w-full h-full rounded-2xl bg-dark-secondary flex items-center justify-center">
+                <div className="w-full h-full rounded-2xl bg-light-secondary dark:bg-dark-secondary flex items-center justify-center">
                   {/* Placeholder for avatar - replace with actual image */}
                   <div className="text-center p-8">
                     <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-accent to-accent-purple flex items-center justify-center mb-4">
@@ -32,7 +32,7 @@ const About = () => {
                         {personalInfo.name.charAt(0)}
                       </span>
                     </div>
-                    <p className="text-text-secondary text-sm">
+                    <p className="text-gray-600 dark:text-text-secondary text-sm">
                       Add your photo at<br />
                       <code className="text-accent">/public/assets/images/avatar.jpg</code>
                     </p>
@@ -49,12 +49,12 @@ const About = () => {
           {/* Content Side */}
           <ScrollReveal direction="right">
             <div className="space-y-6">
-              <div className="flex items-center gap-2 text-text-secondary">
+              <div className="flex items-center gap-2 text-gray-600 dark:text-text-secondary">
                 <MapPin size={18} className="text-accent" />
                 <span>{personalInfo.location}</span>
               </div>
 
-              <p className="text-lg text-text-secondary leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-text-secondary leading-relaxed">
                 {personalInfo.bio}
               </p>
 
@@ -63,13 +63,13 @@ const About = () => {
                 {stats.map((stat, index) => (
                   <motion.div
                     key={index}
-                    className="text-center p-4 bg-dark-secondary rounded-xl border border-white/5"
+                    className="text-center p-4 bg-light-secondary dark:bg-dark-secondary rounded-xl border border-gray-200 dark:border-white/5"
                     whileHover={{ y: -5, borderColor: 'rgba(99, 102, 241, 0.3)' }}
                     transition={{ duration: 0.2 }}
                   >
                     <stat.icon className="mx-auto mb-2 text-accent" size={24} />
-                    <div className="text-2xl font-bold text-text-primary">{stat.value}</div>
-                    <div className="text-xs text-text-secondary">{stat.label}</div>
+                    <div className="text-2xl font-bold text-gray-900 dark:text-text-primary">{stat.value}</div>
+                    <div className="text-xs text-gray-600 dark:text-text-secondary">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -79,7 +79,7 @@ const About = () => {
                 {['Unity Expert', 'Mobile Specialist', 'Clean Architecture', 'Team Player'].map((tag, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-dark-tertiary rounded-full text-sm text-text-secondary border border-white/5"
+                    className="px-4 py-2 bg-light-tertiary dark:bg-dark-tertiary rounded-full text-sm text-gray-600 dark:text-text-secondary border border-gray-200 dark:border-white/5"
                   >
                     {tag}
                   </span>

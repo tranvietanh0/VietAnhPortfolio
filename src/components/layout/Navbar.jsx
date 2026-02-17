@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Code2 } from 'lucide-react';
 import { navLinks } from '../../data/portfolioData';
+import ThemeToggle from '../ui/ThemeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,16 +39,17 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-text-secondary hover:text-accent transition-colors duration-300 font-medium"
+                className="text-gray-600 dark:text-text-secondary hover:text-accent transition-colors duration-300 font-medium"
               >
                 {link.name}
               </a>
             ))}
+            <ThemeToggle />
             <a
               href="#contact"
               className="px-5 py-2.5 bg-accent hover:bg-accent-hover text-white rounded-lg font-medium transition-all duration-300"
@@ -56,14 +58,17 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-text-primary"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile: Theme Toggle + Menu Button */}
+          <div className="flex md:hidden items-center gap-2">
+            <ThemeToggle />
+            <button
+              className="p-2 text-gray-900 dark:text-text-primary"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -82,7 +87,7 @@ const Navbar = () => {
                     key={link.name}
                     href={link.href}
                     onClick={handleLinkClick}
-                    className="text-text-secondary hover:text-accent transition-colors duration-300 font-medium py-2"
+                    className="text-gray-600 dark:text-text-secondary hover:text-accent transition-colors duration-300 font-medium py-2"
                   >
                     {link.name}
                   </a>

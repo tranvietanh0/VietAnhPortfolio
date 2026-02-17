@@ -36,12 +36,12 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
       <ParticleBackground />
-      <div className="absolute inset-0 pointer-events-none opacity-50">
+      <div className="absolute inset-0 pointer-events-none opacity-50 dark:opacity-50">
         <FloatingObject />
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-primary/50 via-transparent to-dark-primary pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-light-primary/50 via-transparent to-light-primary dark:from-dark-primary/50 dark:via-transparent dark:to-dark-primary pointer-events-none" />
 
       {/* Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-20">
@@ -54,10 +54,10 @@ const Hero = () => {
           {/* Greeting */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-dark-secondary/80 rounded-full border border-white/10 mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-light-secondary/80 dark:bg-dark-secondary/80 rounded-full border border-gray-200 dark:border-white/10 mb-6"
           >
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-text-secondary text-sm">Available for work</span>
+            <span className="text-gray-600 dark:text-text-secondary text-sm">Available for work</span>
           </motion.div>
 
           {/* Name */}
@@ -72,7 +72,7 @@ const Hero = () => {
           {/* Title */}
           <motion.h2
             variants={itemVariants}
-            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-secondary mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-600 dark:text-text-secondary mb-6"
           >
             {personalInfo.title}
           </motion.h2>
@@ -80,7 +80,7 @@ const Hero = () => {
           {/* Tagline */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10"
+            className="text-lg md:text-xl text-gray-600 dark:text-text-secondary max-w-2xl mx-auto mb-10"
           >
             {personalInfo.tagline}
           </motion.p>
@@ -116,7 +116,7 @@ const Hero = () => {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-dark-secondary/80 border border-white/10 flex items-center justify-center text-text-secondary hover:text-accent hover:border-accent/50 transition-all duration-300"
+                  className="w-12 h-12 rounded-xl bg-light-secondary/80 dark:bg-dark-secondary/80 border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-600 dark:text-text-secondary hover:text-accent hover:border-accent/50 transition-all duration-300"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={platform}
@@ -131,7 +131,7 @@ const Hero = () => {
         {/* Scroll Indicator */}
         <motion.a
           href="#about"
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-secondary hover:text-accent transition-colors"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600 dark:text-text-secondary hover:text-accent transition-colors"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 0.5 }}

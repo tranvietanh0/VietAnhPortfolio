@@ -15,9 +15,9 @@ const Button = ({
 
   const variants = {
     primary: "bg-accent hover:bg-accent-hover text-white shadow-lg shadow-accent/25 hover:shadow-accent/40",
-    secondary: "bg-dark-tertiary hover:bg-dark-secondary text-text-primary border border-white/10 hover:border-accent/50",
+    secondary: "bg-light-tertiary dark:bg-dark-tertiary hover:bg-light-secondary dark:hover:bg-dark-secondary text-gray-900 dark:text-text-primary border border-gray-200 dark:border-white/10 hover:border-accent/50",
     outline: "border-2 border-accent text-accent hover:bg-accent hover:text-white",
-    ghost: "text-text-secondary hover:text-text-primary hover:bg-dark-tertiary",
+    ghost: "text-gray-600 dark:text-text-secondary hover:text-gray-900 dark:hover:text-text-primary hover:bg-light-tertiary dark:hover:bg-dark-tertiary",
   };
 
   const sizes = {
