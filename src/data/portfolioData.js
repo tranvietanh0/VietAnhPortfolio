@@ -7,6 +7,7 @@ export const personalInfo = {
   location: "Vietnam",
   yearsExp: "3+",
   projectsCompleted: "10+",
+  resumeUrl: null,
   social: {
     github: "https://github.com/vietanh",
     linkedin: "https://linkedin.com/in/vietanh",
@@ -83,7 +84,7 @@ export const projects = [
     id: 1,
     title: "Puzzle Adventure",
     description: "A challenging puzzle game with hundreds of levels, featuring unique mechanics and beautiful visuals. Implemented progressive difficulty system and daily challenges.",
-    image: "/assets/images/project1.jpg",
+    image: null,
     tags: ["Unity", "C#", "Mobile", "Puzzle"],
     links: {
       playstore: "https://play.google.com/store",
@@ -95,7 +96,7 @@ export const projects = [
     id: 2,
     title: "Idle Tycoon Game",
     description: "An addictive idle game where players build and manage their empire. Features offline progression, prestige system, and social leaderboards.",
-    image: "/assets/images/project2.jpg",
+    image: null,
     tags: ["Unity", "C#", "Idle", "Mobile"],
     links: {
       playstore: "https://play.google.com/store",
@@ -106,7 +107,7 @@ export const projects = [
     id: 3,
     title: "Action RPG Demo",
     description: "A demo showcasing real-time combat, inventory system, and character progression. Built with modular architecture for easy content expansion.",
-    image: "/assets/images/project3.jpg",
+    image: null,
     tags: ["Unity", "C#", "RPG", "Combat"],
     links: {
       github: "https://github.com/vietanh/action-rpg",
@@ -118,7 +119,7 @@ export const projects = [
     id: 4,
     title: "Hypercasual Collection",
     description: "A collection of hypercasual games with simple but engaging mechanics. Focused on satisfying gameplay loops and high retention rates.",
-    image: "/assets/images/project4.jpg",
+    image: null,
     tags: ["Unity", "C#", "Hypercasual", "Mobile"],
     links: {
       playstore: "https://play.google.com/store",

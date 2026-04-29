@@ -93,14 +93,16 @@ const Hero = () => {
             <Button href="#projects" size="lg">
               View My Work
             </Button>
-            <Button
-              href="/assets/resume.pdf"
-              variant="secondary"
-              size="lg"
-              icon={Download}
-            >
-              Download CV
-            </Button>
+            {personalInfo.resumeUrl ? (
+              <Button
+                href={personalInfo.resumeUrl}
+                variant="secondary"
+                size="lg"
+                icon={Download}
+              >
+                Download CV
+              </Button>
+            ) : null}
           </motion.div>
 
           {/* Social Links */}

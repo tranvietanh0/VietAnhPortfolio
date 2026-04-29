@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, MeshDistortMaterial } from '@react-three/drei';
 
@@ -54,6 +54,18 @@ function AnimatedTorus() {
 }
 
 const FloatingObject = () => {
+  const [canRender, setCanRender] = useState(false);
+
+  useEffect(() => {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    setCanRender(Boolean(context));
+  }, []);
+
+  if (!canRender) {
+    return null;
+  }
+
   return (
     <div className="absolute inset-0 -z-5">
       <Canvas
